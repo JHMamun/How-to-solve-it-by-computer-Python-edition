@@ -1,0 +1,26 @@
+COMPUTER   PROBLEM-SOLVING 
+
+Our goal  in this work  is to study in depth the process of algorithm design with  particular emphasis  on  the problem-solving aspects of  the task. There are many  definitions of an algorithm. The  following definition is appropriate in computing science. An algorithm consists of a set of explicit and unambiguous finite steps which, when carried out for a given set of initial conditions, produce the corresponding output and terminate in a finite time.
+
+1.1.2 Requirements for solving problems by computer 
+
+From time to time in our everyday activities, we employ algorithms to solve problems. For example, to look up someone's telephone number in a telephone directory we need to employ an algorithm. Tasks such as this are usually performed automatically without any thought to the complex underlying mechanism needed to  effectively conduct the search. It therefore comes as somewhat of a surprise to us when developing computer algorithms that the solution must be specified with such logical precision and in such 
+detail. After studying even a small sample of computer problems it soon becomes obvious that the conscious  depth of understanding needed to design effective computer algorithms is far greater than we are likely to encounter in almost any other problem-solving situation. 
+
+Let us reflect for a moment on the telephone directory look-up problem. A  telephone directory quite  often  contains  hundreds of  thousands of names and telephone numbers yet we have little trouble finding the desired telephone  number we are seeking. We might therefore ask why do we have so little difficulty with a problem of seemingly great size? The answer is simple. We quite naturally take advantage of the order in  the directory to quickly eliminate large sections of the list and home in on the desired name and number. We would never contemplate looking up the telephone number of J.R. Nash by starting at page 1 and examining each name in turn until we finally come  to  Nash's  name  and  telephone number. Nor are  we likely to 
+contemplate  looking up  the name of the person  whose number is 2987533. To conduct such a search, there is no way in  which we can take advantage of the order in the directory and so we are faced with the prospect  of doing a number-by-number search starting at page 1. If, on the other hand, we had a list of telephone   numbers and names ordered by telephone number rather than name,  the task would be straightforward. What  these examples serve to emphasize is the important influence of the data organization on  the performance of algorithms. Only when a data structure is symbiotically linked with an algorithm can we expect high performance. Before considering these and other aspects of algorithm design we need to address the topic of problemsolving in some detail. 
+
+1.2    THE PROBLEM-SOLVING ASPECT 
+
+It is  widely recognized that problem-solving is a creative process which largely defies systematization and mechanization. This may not  sound very 
+encouraging to the would-be problem-solver. To balance this, most people,
+during their schooling, acquire at least a modest set of problem-solving skills 
+which they may or may not be aware of. 
+
+Even if one is not naturally skilled at problem-solving there are a number of steps that can be taken to raise the level of  one's performance. It is not implied or intended  that the suggestions in  what follows are in any way a recipe for problem-solving. The plain fact of the matter is that there is no universal method. Different strategies appear  to  work for  different people. 
+
+Within this context, then, where can we begin to say anything useful about computer problem-solving? We must start from the premise that computer problem-solving is  about understanding. 
+
+1.2.1    Problem definition phase 
+
+Success in solving any problem is only possible after we have made the effort to come to terms with or understand the problem at hand. We cannot hope to make useful progress in solving a problem until we fully understand what it is we are trying to solve. This preliminary investigation may be thought of as the problem definition phase. In other words, what we must do during this phase is work out what must be done rather than how to do it. That is, we must try to extract from the problem statement  (which  is often  quite imprecise and maybe even ambiguous) a set of precisely  defined tasks. Inexperienced problem-solvers too often gallop ahead with how they  are going to solve the problem only to find that they are either solving the wrong problem or they are solving just a very special case of what is actually required. In short, a lot of care should be taken in working out precisely what must be done. The development of algorithms for finding the square root (algorithm 3.1) and the greatest common divisor (algorithm  3.3) are good illustrations of how important it is to  carefully define the problem. Then, from the definitions, we are  led in a natural way to algorithm designs for these two problems. 
