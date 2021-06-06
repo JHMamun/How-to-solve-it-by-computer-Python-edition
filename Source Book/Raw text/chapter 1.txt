@@ -24,3 +24,72 @@ Within this context, then, where can we begin to say anything useful about compu
 1.2.1    Problem definition phase 
 
 Success in solving any problem is only possible after we have made the effort to come to terms with or understand the problem at hand. We cannot hope to make useful progress in solving a problem until we fully understand what it is we are trying to solve. This preliminary investigation may be thought of as the problem definition phase. In other words, what we must do during this phase is work out what must be done rather than how to do it. That is, we must try to extract from the problem statement  (which  is often  quite imprecise and maybe even ambiguous) a set of precisely  defined tasks. Inexperienced problem-solvers too often gallop ahead with how they  are going to solve the problem only to find that they are either solving the wrong problem or they are solving just a very special case of what is actually required. In short, a lot of care should be taken in working out precisely what must be done. The development of algorithms for finding the square root (algorithm 3.1) and the greatest common divisor (algorithm  3.3) are good illustrations of how important it is to  carefully define the problem. Then, from the definitions, we are  led in a natural way to algorithm designs for these two problems. 
+
+1.2.2   Getting  started on a problem 
+
+There are many ways to solve most problems and also many solutions to most problems. This situation does not make the job of problem-solving easy. When confronted with many possible lines of attack it is usually difficult to recognize quickly which paths are likely to be fruitless and which may be productive.
+
+Perhaps the more common situation for people just starting to come to grips with the computer solution to problems is that they just do not have any idea where to start on the problem, even after the problem definition phase. When confronted with this situation, what can we do? A block often occurs at this point because people become concerned with details of the implementation before they have completely understood or worked out an implementation-independent solution. The best advice here is not to be too concerned about detail. That can come later when the complexity of the problem as a whole has been brought under control. The old computer proverb' which says "the sooner you start coding your program the longer it is going to take" is usually painfully true.
+
+
+1.2.3    The use of specific examples 
+
+A useful strategy when we are stuck is to use some props or heuristics (i.e. rules of thumb) to try to get a start with the problem. An approach that often allows us to make a start on a problem is to pick a specific example of the general problem we wish to solve and try to work out the mechanism that will allow us to solve this particular problem (e.g. if you want to find the maximum in a set of numbers, choose a particular set of numbers and work out the mechanism for finding the maximum in this set—see for example algorithm 4.3). It is usually much easier to work out the details of a solution to a specific problem because the relationship between the mechanism and the particular problem is more clearly defined. Furthermore, a specific problem often forces us to focus on details that are not so apparent when the problem is considered abstractly. Geometrical or schematic diagrams rep-resenting certain aspects of the problem can be usefully employed in many instances (see, for example, algorithm 3.3).
+This approach of focusing on a particular problem can often give us the foothold we need for making a start on the solution to the general problem. The method should, however, not be abused. It is very easy to fall into the trap of thinking that the solution to a specific problem or a specific class-of problems is also a solution to the general problem. Sometimes this happens but we should always be very wary of making such an assumption.
+Ideally, the specifications for our particular problem need to be examined very carefully to try to establish whether or not the proposed algorithm can meet those requirements. If the full specifications are difficult to formulate sometimes a well-chosen set of test cases can give us a degree of confidence in the generality of our solution. However, nothing less than a complete proof of correctness of our algorithm is entirely satisfactory. We will discuss this matter in more detail a little later.
+
+
+
+1.2.4    Similarities among problems 
+
+We have already seen that one way to make a start on a problem is byconsidering a specific example.  Another thing that we should always try todo is bring as much past experience as possible to bear on the currentproblem.  In this respect it is important to see if there are any similaritiesbetween the current problem and other problems that we have solved or wehave seen solved.  Once we have had a little experience in computerproblem-solving it is unlikely that a new problem will be completelydivorced from other problems we have seen.  A good habit therefore is toalways make an effort to be aware of the similarities among problems.  Themore experience one has the morel tools and techniques one can bring tobear in tackling a given problem.  The contribution of experience to ourability to solve problems is not always helpful.  In fact, sometimes it blocks usfrom discovering a desirable or better solution to a problem.  A classic case ofexperience blocking progress was Einstein's discovery of relativity.  For aconsiderable time before Einstein made his discovery the scientists of theday had the necessary facts that could have led them to relativity but it isalmost certain that their experience blocked them from even contemplatingsuch a proposal-Newton's theory was correct and that was all there was toit! On this point it is therefore probably best to place only cautious relianceon past experience.  In trying to get a better solution to a problem, sometimestoo much study of the existing solution or a similar problem forces us downthe same reasoning path (which may not be the best) and to the same deadend.  In trying to get a better solution to a problem, it is usually wise, in thefirst instance at least, to try to independently solve the problem.  We then giveourselves a better chance of not falling into the same traps as our predeces-sors.  In the final analysis, every problem must be considered on its merits. A skill that it is important to try to develop in problem-solving is theability to view a problem from a variety of angles.  One must be able tometaphorically turn a problem upside down, inside out, sideways, back-wards, forwards and so on.  Once one has developed this skill it should bepossible to get started on any problem.
+
+1.2.5    Working backwards from the  solution 
+
+There  are still other  things we can try when we do not know where to start on 
+a problem. We can, for  example,  in some cases assume that we already  have 
+the  solution to  the  problem and  then try  to work backwards  to  the starting 
+conditions. Even a guess  at  the  solution to  the  problem may  be  enough to 
+give us a foothold to start on the problem. (See, for  example, the square root 
+problem-algorithm 3.1). Whatever  attempts that we make to get started on 
+a  problem  we  should  write   down  as  we  go  along  the  various  steps  and 
+explorations   made.  This can be important in  allowing us to systematize  our 
+investigations  and avoid  duplication of effort. Another  practice  that helps us 
+develop our  problem-solving skills is,  once  we  have  solved  a problem, to 
+consciously   reflect back on  the  way we went about discovering the solution. 
+This can  help  us significantly. The  most crucial thing of  all  in  developing 
+problem-solving skills is practice.  Piaget  summed  this up very nicely with the 
+statement   that  "we  learn most  when  we have  to  invent."
+
+
+1.2.6   General problem-solving strategies 
+
+There are  a number of general  and  powerful computational strategies  that 
+are  repeatedly   used  in   various   guises  in  computing  science.  Often  it  is 
+possible  to phrase  a problem in  terms  of one  of these strategies and achieve 
+very  considerable gains  in  computational efficiency. 
+Probably the most  widely known and most often used of these principles 
+is the divide-and-conquer  strategy. The basic idea with divide-and-conquer is 
+to  divide  the  original problem into two  or  more subproblems which  can 
+hopefully be solved more  efficiently  by the same technique.  If  it is possible  to 
+proceed   with  this  splitting into smaller   and  smaller   subproblems   we  will 
+eventually   reach  the stage  where  the  subproblems are  small enough   to  be 
+solved  without further splitting. This way of breaking down the solution to a 
+problem has found wide  application in particular with  sorting, selection,  and 
+searching  algorithms. We will see later in  Chapter  5  when  we consider  the 
+binary search  algorithm how  applying this  strategy  to  an  ordered data  set 
+results  in  an algorithm that needs to make only  login rather  than n compari- 
+sons to  locate  a given  item  in  an  ordered  list  n  elements  long.  When  this 
+principle is used  in  sorting algorithms, the number of  comparisons   can  be 
+reduced  from  the  order  of  n2  steps  to  n  login steps,  a  substantial   gain 
+particularly for  large n. The  same idea can be applied to file comparison   and 
+in many  other instances  to give  substantial  gains in computational efficiency. 
+It  is not  absolutely   necessary  for  divide-and-conquer to always exactly halve 
+the  problem size. The  algorithm used in  Chapter  4  to  find the ktt' smallest 
+element repeatedly reduces  the  size  of  the  problem. Although it  does  not 
+divide the problem in half at each step it has very good average performance. 
+It  is also possible  to apply the divide-and-conquer strategy essentially  in 
+reverse  to  some  problems. The  resulting binary  doubling strategy  can give 
+the  same  sort  of  gains  in   computational  efficiency.  We  will consider   in 
+Chapter   3 how  this complementary    technique can be  used  to advantage   to 
+SEC.  
